@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171b19">
+  <title>The Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="corner-stamp">FOR ONE VERY IMPORTANT DAY</div>
+
+  <main>
+    <section class="screen active" id="screen1">
+      <div class="workshop-top"><span>THE CLOCKMAKER'S PRIVATE WORKSHOP</span><span>VOL. XI · 2026</span></div>
+      <div class="intro-layout">
+        <div class="intro-copy">
+          <p class="eyebrow">IDK what i am even making atp</p>
+          <h1>The<br><em>Clock</em><br>(idk)</h1>
+          <p class="subtitle">A machine designed for the grand occasion of one.</p>
+          <p class="small-copy">Some clocks measure minutes. This one measures the excitement.</p>
+          <button class="primary-btn" id="startBtn">WIND UP THE MACHINE <span>↗</span></button>
+        </div>
+        <div class="clock-illustration" aria-label="Decorative clockwork illustration">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="gear gear-large">✣</div><div class="gear gear-small">✣</div>
+          <div class="dial"><div class="dial-inner"><span class="roman">XII</span><span class="roman r3">III</span><span class="roman r6">VI</span><span class="roman r9">IX</span><div class="hand hand-hour"></div><div class="hand hand-minute"></div><div class="pin"></div></div></div>
+          <div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div>
+          <div class="shinchan-note"><img src="assets/images/shinchan.png" alt="Shin-chan sticker" onerror="this.style.display='none'"><span>chief gear inspector</span></div>
+        </div>
+      </div>
+      <div class="bottom-rule"><span>TURN THE KEY. BEGIN THE COUNT.</span><span>☼</span><span>MADE WITH QUESTIONABLE AMOUNTS OF EFFORT</span></div>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="workshop-top"><span>CHAMBER NO. 02</span><span>THE TIMEKEEPING ENGINE</span></div>
+      <div class="chamber">
+        <p class="eyebrow">THE MACHINE IS RUNNING</p>
+        <h2>Time until <em>the big day.</em></h2>
+        <p class="subtitle">All mechanisms calibrated to Indian Standard Time.</p>
+        <div class="countdown-frame">
+          <div class="gear gear-count g-left">✣</div><div class="gear gear-count g-right">✣</div>
+          <div class="countdown" aria-live="polite">
+            <div class="time-unit"><strong id="days">00</strong><span>DAYS</span></div>
+            <b class="colon">:</b>
+            <div class="time-unit"><strong id="hours">00</strong><span>HOURS</span></div>
+            <b class="colon">:</b>
+            <div class="time-unit"><strong id="minutes">00</strong><span>MINUTES</span></div>
+            <b class="colon">:</b>
+            <div class="time-unit"><strong id="seconds">00</strong><span>SECONDS</span></div>
+          </div>
+          <div class="countdown-foot"><span>DESTINATION: NOVEMBER 20 · 00:00 IST</span><span id="status">CALIBRATING...</span></div>
+        </div>
+        <div class="chamber-bottom">
+          <p>Every tick brings us closer to a certain someone's annual upgrade.</p>
+          <button class="secondary-btn" id="toLetterBtn">PROCEED TO THE LETTER ↗</button>
+        </div>
+      </div>
+      <div class="bottom-rule"><span>PRECISION IS IMPORTANT. TEA IS MORE IMPORTANT.</span><span>XI</span><span>THE PHYSICS TIMEKEEPING COMPANY</span></div>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="workshop-top"><span>CHAMBER NO. 03</span><span>PERSONAL CORRESPONDENCE</span></div>
+      <div class="letter-wrap">
+        <div class="letter-tools"><span>✧ A MESSAGE FROM THE CLOCKMAKER ✧</span><button id="keyBtn" class="key-btn" aria-label="Unlock the letter">⚿</button></div>
+        <article class="letter" id="letter">
+          <p class="letter-date">A VERY IMPORTANT DAY</p>
+          <h2>YOO <em>CHOTE HEIGHT WALE HUMAN,</em></h2>
+          <div class="letter-body" id="letterBody">
+            <p>Well, well, well. i realise this stuff has been getting boring like bruh its same intro- countown-letter format no?.</p>
+            <p>So i am prolly gonna yk try to switch it up for next like i think 10 lefts? (excluding yk one for 20) I mean for tmrw's one its gonna be an arg sort of thing idkk ,ill think abt it its like 1month left until your birthday from the day i am coding this.</p>
+            <p>Anyways bye bye till then woo hoo.</p>
+          </div>
+          <p class="signature">Yours physics lover,<br><strong></strong></p>
+        </article>
+        <div class="letter-bottom"><button class="secondary-btn" id="secretBtn">A SUSPICIOUS LITTLE GEAR ✦</button><button class="text-btn" id="backBtn">↶ BACK TO THE MACHINE</button></div>
+      </div>
+      <div class="bottom-rule"><span>HANDLE WITH CARE</span><span>♡</span><span>THIS MSG IS NOT MACHINE-GENERATED. PROBABLY.</span></div>
+    </section>
+  </main>
+
+  <div class="modal" id="secretModal" aria-hidden="true">
+    <div class="modal-card"><button class="close-btn" id="closeSecret">×</button><p class="eyebrow">UNAUTHORIZED DISCOVERY</p><h2 id="secretTitle">THE GEAR WAS A BUTTON?</h2><p id="secretText">Congratulations. You have discovered a highly classified message: you are genuinely one of a kind. Never let the machine tell you otherwise.</p></div>
+  </div>
+
+  <div class="birthday-overlay" id="birthdayOverlay" aria-hidden="true">
+    <div class="birthday-card"><p class="eyebrow">THE CLOCK HAS STRUCK TWELVE</p><h1>IT'S YOUR<br><em>BIRTHDAY!</em></h1><p>The machine's most important day has finally arrived.</p><button class="primary-btn" id="birthdaySecretBtn">UNLOCK TODAY'S SURPRISE ✦</button></div>
+    <div class="confetti" id="confetti"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
